@@ -4,6 +4,7 @@ interface FieldError {
 }
 
 export const toErrorsMap = (errors: FieldError[]) => {
+                // => expects type { "string": "string"}
   const errorMap: Record<string, string> = {};
   errors.forEach(({ field, message }) => {
     //the key is the field and the value is the message
