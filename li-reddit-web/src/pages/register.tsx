@@ -22,9 +22,9 @@ const Register: React.FC<FormikProps<registerProps>> = ({}) => {
   return (
     <Wrapper variant="regular">
       <Formik
-        initialValues={{ username: "", password: "" }}
+        initialValues={{ username: "", email: "", password: "" }}
         onSubmit={async (values, { setErrors }) => {
-          const response = await register(values);
+          const response = await register({options: values});
 
           if (response.data?.register.errors) {
          //converts the array of objects into an object and then gets displayed
@@ -38,6 +38,11 @@ const Register: React.FC<FormikProps<registerProps>> = ({}) => {
         {({ isSubmitting }) => (
           <Form>
             <Box mt={3}>
+            <InputField
+                name="email"
+                placeholder="email"
+                label="example@yahoo.com"
+              />
               <InputField
                 name="username"
                 placeholder="username"
