@@ -12,6 +12,8 @@ const Index = () => {
   useEffect(() => {
     setDomLoaded(true);
   }, []);
+
+  
   return (
     <>
       {domLoaded && (
