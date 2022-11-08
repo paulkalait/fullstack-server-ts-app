@@ -169,7 +169,7 @@ export const UserFragmentFragmentDoc = gql`
     `;
 export const ChangePasswordDocument = gql`
     mutation ChangePassword($token: String!, $newPassword: String!) {
-  changePassword(token: $token, newPassword: $token) {
+  changePassword(token: $token, newPassword: $newPassword) {
     errors {
       ...RegularError
     }
