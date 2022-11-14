@@ -1,0 +1,8 @@
+fragment postFragment on Post{ 
+    title,
+    text,
+    points,
+    createdAt,
+    updatedAt,
+    creatorId
+}

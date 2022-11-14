@@ -1,0 +1,4 @@
+fragment postError on PostError{
+      field, 
+    message
+}
